@@ -1,10 +1,14 @@
-import NxWelcome from './nx-welcome';
+import { Header } from "../components/Header/Header";
+import { Content } from "../components/Content/Content";
+import { Footer } from "../components/Footer/Footer";
 
 export function App() {
 	return (
-		<div>
-			<NxWelcome title="frontend" />
-		</div>
+		<>
+			<Header title={"Good price"} />
+			<Content />
+			<Footer />
+		</>
 	);
 }
 

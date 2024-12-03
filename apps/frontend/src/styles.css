@@ -1,4 +1,10 @@
+@import 'styles/input.css';
+@import 'styles/cta.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* You can add global styles to this file, and also import other style files */
+
+body {
+	background-color: #FFFDF2;
+	color: #000;
+}

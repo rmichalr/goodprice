@@ -1,7 +1,9 @@
 {
   "name": "@goodprice/shared",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "redis": "^4.7.0"
+  },
   "main": "./index.js",
   "module": "./index.mjs",
   "typings": "./index.d.ts",

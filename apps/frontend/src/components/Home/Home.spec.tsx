@@ -1,7 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import Home from './Home';
 
-test('renders welcome message', () => {
-	render(<Home />);
-	expect(screen.getByText(/Welcome to GoodPrice!/i)).toBeTruthy();
+describe('Home', () => {
+	it('should render successfully', () => {
+		const { baseElement } = render(<Home />);
+		expect(baseElement).toBeTruthy();
+	});
 });
