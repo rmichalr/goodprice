@@ -28,6 +28,7 @@ export const Content: React.FC = () => {
 			<div className="relative flex w-1/2 mx-auto">
 				<input
 					id="product-search"
+					data-testid="product-search"
 					type="text"
 					placeholder=""
 					className={`flex-grow border-2 border-gray-300 p-2 rounded-lg`}
@@ -37,6 +38,7 @@ export const Content: React.FC = () => {
 					onChange={(e) => setFilled(!!e.target.value)}
 				/>
 				<label
+					data-testid="product-search-label"
 					htmlFor="search"
 					className={`absolute text-lg font-semibold transition-all ${
 						focused || filled

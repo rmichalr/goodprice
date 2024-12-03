@@ -25,18 +25,20 @@ export const Header: React.FC<HeaderProps> = ({ title, icon }) => {
 	return (
 		<header className="flex justify-between p-4">
 			<a className="flex items-center" href="/">
-				{icon && <i className={`${icon} mr-2`} />}
+				{icon && <i className={`${icon} mr-2`} data-testid="header-icon"></i>}
 				<span className="text-2xl font-bold">{title}</span>
 			</a>
 			<button
 				className="flex items-center justify-center p-2 rounded-md focus:outline-none"
 				onClick={() => setMenuOpen(!menuOpen)}
 				ref={navRef}
+				data-testid="menu-button"
 			>
 				{menuOpen ? 'Close' : 'Menu'}
 			</button>
 			<nav
 				className={`absolute top-0 right-0 mt-16 bg-white shadow-md p-4 rounded-md ${menuOpen ? '' : 'hidden'}`}
+				data-testid="menu"
 			>
 				<ul className="flex flex-col space-y-2">
 					<li>

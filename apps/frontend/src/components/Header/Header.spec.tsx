@@ -16,10 +16,10 @@ describe('Header', () => {
 
 	it('should toggle the menu when the button is clicked', () => {
 		render(<Header title="Test Title" />);
-		const button = screen.getByRole('button');
+		const button = screen.getByTestId('menu-button');
 		fireEvent.click(button);
-		expect(screen.getByText('About')).toBeVisible();
+		expect(screen.getByTestId('menu')).not.toHaveClass('hidden');
 		fireEvent.click(button);
-		expect(screen.queryByText('About')).not.toBeVisible();
+		expect(screen.getByTestId('menu')).toHaveClass('hidden');
 	});
 });
